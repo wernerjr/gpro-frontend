@@ -13,7 +13,7 @@ const Home: React.FC = () => {
   const handleLogin = useCallback(() => {
     signIn({ email: 'Teste', password: '123456' });
     history.push('/home');
-  }, [signIn]);
+  }, [history, signIn]);
 
   return (
     <Container>
