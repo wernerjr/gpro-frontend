@@ -41,9 +41,12 @@ const AuthProvider: React.FC = ({ children }) => {
     */
 
     /* Mock */
-    const response = {data: {
-      token: 'dgfkbdhfliagbf342134a', user: {name: 'Shenron'}
-    }}
+    const response = {
+      data: {
+        token: 'dgfkbdhfliagbf342134a',
+        user: { name: 'Shenron' },
+      },
+    };
 
     const { token, user } = response.data;
 

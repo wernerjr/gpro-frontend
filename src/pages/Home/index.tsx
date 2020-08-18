@@ -6,7 +6,7 @@ import { useAuth } from '../../hooks/auth';
 
 const Home: React.FC = () => {
   const { signOut, user } = useAuth();
-  console.log(user)
+  console.log(user);
   const handleLogout = useCallback(() => {
     signOut();
   }, [signOut]);
