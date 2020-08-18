@@ -6,9 +6,11 @@ import Menu from '../components/Menu';
 
 const AppProvider: React.FC = ({ children }) => (
   <>
-    <Header />
-    <Menu />
-    <AuthProvider>{children}</AuthProvider>
+    <AuthProvider>
+      <Header />
+      <Menu />
+      {children}
+    </AuthProvider>
   </>
 );
 

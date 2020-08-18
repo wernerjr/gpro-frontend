@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react';
+import { FaArrowLeft } from 'react-icons/fa';
 
 import { Container } from './styles';
 
@@ -15,6 +16,7 @@ const Home: React.FC = () => {
     <Container>
       <h1>Home</h1>
       <button type="button" onClick={handleLogout}>
+        <FaArrowLeft size={15} />
         Logout
       </button>
     </Container>

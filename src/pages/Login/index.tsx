@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
+import { FaArrowRight } from 'react-icons/fa';
 
 import { Container } from './styles';
 
@@ -18,6 +19,7 @@ const Home: React.FC = () => {
     <Container>
       <h1>Login</h1>
       <button type="button" onClick={handleLogin}>
+        <FaArrowRight size={15} />
         Login
       </button>
     </Container>
