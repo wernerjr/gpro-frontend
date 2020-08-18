@@ -1,11 +1,12 @@
 import React from 'react';
+import { FaHome } from 'react-icons/fa';
 
 import { Container } from './styles';
 
 const Menu: React.FC = () => {
   return (
     <Container>
-      <h1>Menu</h1>
+      <FaHome size={24} />
     </Container>
   );
 };
