@@ -5,13 +5,17 @@ export const Container = styled.div`
   background: #ffffff;
   padding: 20px 10px;
 
-  border: 1px solid #f2f2f2;
+  border: 0px;
   box-sizing: border-box;
-  box-shadow: 0px 0px 8px rgba(130, 130, 130, 0.2);
 
-  span {
-    color: #b11f24;
-    font-size: 24px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+
+  h3 {
+    color: #45130f;
+    font-size: 20px;
     line-height: 33px;
   }
 `;

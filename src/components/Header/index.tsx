@@ -5,7 +5,7 @@ import { Container } from './styles';
 const Header: React.FC = () => {
   return (
     <Container>
-      <span>Gpro | Ambev</span>
+      <h3>MERCADOTECH</h3>
     </Container>
   );
 };

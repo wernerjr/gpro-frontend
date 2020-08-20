@@ -1,16 +1,13 @@
 import React from 'react';
-
-import { AuthProvider } from './auth';
 import Header from '../components/Header';
-import Menu from '../components/Menu';
+
+import Tabs from '../components/Tabs';
 
 const AppProvider: React.FC = ({ children }) => (
   <>
-    <AuthProvider>
-      <Header />
-      <Menu />
-      {children}
-    </AuthProvider>
+    <Header />
+    <Tabs />
+    {children}
   </>
 );
 
