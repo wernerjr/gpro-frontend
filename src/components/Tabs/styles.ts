@@ -4,6 +4,7 @@ import { Tabs, Tab } from '@material-ui/core';
 export const MaterialTabs = styled(Tabs)`
   display: flex;
   width: 100%;
+  background: #ffffff;
 `;
 
 export const MaterialTab = styled(Tab)`
