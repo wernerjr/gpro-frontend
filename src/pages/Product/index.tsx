@@ -18,7 +18,7 @@ interface Product {
   ambevCode: number;
   name: string;
   description: string;
-  imageUrl: string;
+  imageURL: string;
   alcoholic: boolean;
   price: number;
   amount: number;
@@ -32,7 +32,7 @@ interface OrderProduct {
 const Product: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
 
-  useEffect(() => {
+  const getProducts = useCallback(() => {
     apiProduct.get('Product/GetProducts').then((response) => {
       setProducts(response.data.data);
     });
@@ -91,7 +91,12 @@ const Product: React.FC = () => {
       products: formatProducts(),
       totalPrice: Math.round(getTotalPrice() * 100) / 100,
     });
+    getProducts();
   }, [formatProducts, getTotalPrice]);
+
+  useEffect(() => {
+    getProducts();
+  }, [getProducts]);
 
   return (
     <>
@@ -110,7 +115,7 @@ const Product: React.FC = () => {
                   style={{ padding: 0, cursor: 'pointer' }}
                 >
                   <Container>
-                    <FiUser size={20} />
+                    <img src={product.imageURL} alt={product.name} />
                     <ListItemText
                       primary={product.name.trim()}
                       secondary={`R$ ${product.price}`}
@@ -141,7 +146,7 @@ const Product: React.FC = () => {
                   style={{ padding: 0, cursor: 'pointer' }}
                 >
                   <Container>
-                    <FiUser size={20} />
+                    <img src={product.imageURL} alt={product.name} />
                     <ListItemText
                       primary={product.name}
                       secondary={`R$ ${product.price}`}

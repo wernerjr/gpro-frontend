@@ -45,8 +45,12 @@ export const Container = styled.div<ContainerProps>`
   > span {
     color: #803934 !important;
     font-weight: 500;
-    width: 50px;
+    width: 30px;
     text-align: center;
+  }
+  > img {
+    height: 50px;
+    width: 50px;
   }
 `;
 
@@ -59,7 +63,7 @@ export const Button = styled(ButtonMaterial)`
 
 export const ButtonSubmit = styled(ButtonMaterial)`
   border-radius: 4px;
-  width: 300px;
+  width: 95%;
   background: #ba000d !important;
   color: #ffffff !important;
 `;
@@ -69,7 +73,7 @@ export const ButtonContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 15px;
+  margin: 15px 0;
   position: fixed;
   bottom: 0;
 `;
