@@ -104,6 +104,7 @@ const Product: React.FC = () => {
         <List
           style={{ background: '#ffffff' }}
           component="nav"
+          data-testid="lista-alcoolicos"
           aria-labelledby="subheader-alcoolico"
           subheader={<ListSubheader>Alcoólicos</ListSubheader>}
         >
@@ -111,6 +112,7 @@ const Product: React.FC = () => {
             (product) =>
               product.alcoholic && (
                 <ListItem
+                  data-testid="list-item"
                   key={product.id}
                   style={{ padding: 0, cursor: 'pointer' }}
                 >
@@ -120,11 +122,11 @@ const Product: React.FC = () => {
                       primary={product.name.trim()}
                       secondary={`R$ ${product.price}`}
                     />
-                    <Button onClick={() => handleDencreaseAmount(product.id)}>
+                    <Button aria-label="decrement" onClick={() => handleDencreaseAmount(product.id)}>
                       -
                     </Button>
-                    <span>{product.amount ?? 0}</span>
-                    <Button onClick={() => handleIncreaseAmount(product.id)}>
+                    <span aria-label="amount">{product.amount ?? 0}</span>
+                    <Button aria-label="increment" onClick={() => handleIncreaseAmount(product.id)}>
                       +
                     </Button>
                   </Container>
